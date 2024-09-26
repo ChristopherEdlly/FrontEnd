@@ -1,43 +1,118 @@
-form {
-    max-width: 800px;
-}
-
-i{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background-color: #007bff;
-    border-radius: 50%;
-    color: white;
-}
-
-i,
-svg {
-    font-size: 20px; /* Aumente ou diminua conforme necessário */
-}
-
-.header {
+body {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    background-image: url('https://images.unsplash.com/photo-1477346611705-65d1883cee1e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main {
+    width: 90vw !important;
+    max-height: 100vh !important;
+}
+
+@media (max-width: 929px) {
+    .section {
+        width: 100vw !important;
+    }
+    .main {
+        width: 100vw !important;
+    }
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 100px;
+    padding: 0 30px 0  30px ;
+}
+
+.card {
+    padding: 2px;
+    width: 100%;
+    background: rgb(17, 4, 134);
+    border-radius: 15px;
+    color: white;
+    background: linear-gradient(to right, rgb(20, 30, 48), rgb(36, 59, 85));
+    cursor: pointer;
+}
+
+.card:hover{
+    color: green;
+}
+
+.activeBtn {
+    background-color: #3a528e; 
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.4);
+    border: 2px solid #ff0000 !important;
+    color: #ff0000 !important;
+}
+
+.text {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+.card .icon {
+    font-size: 40px;
+    transition: all 0.3s ease-in-out;
 }
 
 .form-control {
-    background-color: #343a40;
-    border: 1px solid #495057;
+    background-color: #343a40 !important;
+    border: 1px solid #495057 !important;
     color: white;
+    flex-wrap: wrap !important;
 }
 
-.form-control::placeholder {
-    color: #ced4da;
+input {
+    padding: 2px !important;
+    text-align: center !important;
 }
 
-.form-control:focus {
-    background-color: #495057;
-    color: white;
-    border-color: #6c757d;
+input {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo claro com 80% de opacidade */
+    color: #ffffff; /* Define o texto como branco */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borda semitransparente */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Cor do placeholder */
+}
+
+input:focus {
+    border-color: #ffffff; 
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+
+td.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+td .btn{
+    width: 70%;
+    font-size: 1rem;
+}
+
+.btn{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 input:-webkit-autofill,
@@ -46,5 +121,52 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0px 1000px #343a40 inset;
     -webkit-text-fill-color: white;
-    transition: background-color 5000s ease-in-out 0s;
+    color: white;
+}
+input:focus {
+    color: #ffffff !important;
+}
+
+
+.table-responsive {
+    overflow-y: scroll;
+    max-height: 45vh;
+}
+
+.active {
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+}
+
+.active th, .active td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Borda semitransparente para células */
+}
+
+.active th {
+    font-weight: bold;
+    color: #ffffff; /* Cor do texto do cabeçalho */
+}
+
+.active td {
+    color: #e0e0e0; /* Cor do texto das células */
+}
+
+
+.disable {
+    display: none;
+}
+
+.table {
+    background-color: transparent !important;
+    border: #343a40;
+}
+
+.table th,
+.table td {
+    background-color: transparent !important;
 }
